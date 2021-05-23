@@ -1,0 +1,8 @@
+[windows]  # group name
+win10 ansible_host=192.168.10.4
+[windows:vars]  # define variable for windows group
+ansible_user=bot147353
+ansible_password=esb@1313
+ansible_port=5985
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore

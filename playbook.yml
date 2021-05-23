@@ -1,0 +1,16 @@
+- hosts: windows
+  gather_facts: no
+  vars:
+    py_src_name: remote_run.py
+    py_dst_dir: C:\temp\ansible
+  tasks:
+    - name: Create folder on remote host
+      win_file:
+        path: '{{ py_dst_dir }}'
+        state: directory
+    - name: Copy python file to remote host
+      win_copy:
+        src: '{{ py_src_name }}'
+        dest: '{{ py_dst_dir }}\{{ py_src_name }}'
+    - name: Execute python program
+      win_shell: python '{{ py_dst_dir }}\{{ py_src_name }}'

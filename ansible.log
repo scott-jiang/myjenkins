@@ -1,0 +1,530 @@
+2021-05-22 16:21:24,663 p=3867 u=root n=ansible | win10 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "plaintext: the specified credentials were rejected by the server", 
+    "unreachable": true
+}
+2021-05-22 16:23:28,588 p=3917 u=root n=ansible | win10 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "plaintext: the specified credentials were rejected by the server", 
+    "unreachable": true
+}
+2021-05-22 16:28:44,962 p=3947 u=root n=ansible | win10 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2021-05-22 17:25:06,836 p=4197 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:25:06,870 p=4197 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:25:12,596 p=4197 u=root n=ansible | changed: [win10]
+2021-05-22 17:25:12,606 p=4197 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:25:18,116 p=4197 u=root n=ansible | changed: [win10]
+2021-05-22 17:25:18,120 p=4197 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:25:22,419 p=4197 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:01.406293", "end": "2021-05-22 05:25:21.795034", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:25:20.388741", "stderr": "Program 'python.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ject Text.UTF8Encoding $false; python 'C:\\temp\\ansible\\remote_run.py'\r\n+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ject Text.UTF8Encoding $false; python 'C:\\temp\\ansible\\remote_run.py'\r\n+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ject Text.UTF8Encoding $false; python 'C:\\temp\\ansible\\remote_run.py'", "+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ject Text.UTF8Encoding $false; python 'C:\\temp\\ansible\\remote_run.py'", "+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:25:22,426 p=4197 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:25:22,427 p=4197 u=root n=ansible | win10                      : ok=2    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:28:33,980 p=4233 u=root n=ansible | ansible-playbook 2.9.21
+  config file = /ansible/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.16 (default, Oct 10 2019, 22:02:15) [GCC 8.3.0]
+2021-05-22 17:28:33,981 p=4233 u=root n=ansible | Using /ansible/ansible.cfg as config file
+2021-05-22 17:28:33,988 p=4233 u=root n=ansible | host_list declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 17:28:33,988 p=4233 u=root n=ansible | script declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 17:28:33,989 p=4233 u=root n=ansible | auto declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 17:28:33,993 p=4233 u=root n=ansible | Parsed /ansible/inventory inventory source with ini plugin
+2021-05-22 17:28:34,371 p=4233 u=root n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-05-22 17:28:34,372 p=4233 u=root n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-05-22 17:28:34,372 p=4233 u=root n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-05-22 17:28:34,372 p=4233 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 17:28:34,373 p=4233 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 17:28:34,373 p=4233 u=root n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-05-22 17:28:34,374 p=4233 u=root n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-05-22 17:28:34,374 p=4233 u=root n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-05-22 17:28:34,375 p=4233 u=root n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-05-22 17:28:34,376 p=4233 u=root n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-05-22 17:28:34,376 p=4233 u=root n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-05-22 17:28:34,376 p=4233 u=root n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-05-22 17:28:34,377 p=4233 u=root n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-05-22 17:28:34,378 p=4233 u=root n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-05-22 17:28:34,378 p=4233 u=root n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-05-22 17:28:34,379 p=4233 u=root n=ansible | PLAYBOOK: playbook.yml ******************************************************************************************************************************************
+2021-05-22 17:28:34,379 p=4233 u=root n=ansible | 1 plays in playbook.yml
+2021-05-22 17:28:34,383 p=4233 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:28:34,390 p=4233 u=root n=ansible | META: ran handlers
+2021-05-22 17:28:34,395 p=4233 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:28:34,468 p=4240 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_file.ps1
+2021-05-22 17:28:34,469 p=4240 u=root n=ansible | Pipelining is enabled.
+2021-05-22 17:28:34,472 p=4240 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 17:28:34,622 p=4240 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 17:28:36,318 p=4233 u=root n=ansible | ok: [win10] => {
+    "changed": false
+}
+2021-05-22 17:28:36,329 p=4233 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:28:36,432 p=4242 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_copy.ps1
+2021-05-22 17:28:36,433 p=4242 u=root n=ansible | Pipelining is enabled.
+2021-05-22 17:28:36,436 p=4242 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 17:28:36,521 p=4242 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 17:28:37,948 p=4233 u=root n=ansible | ok: [win10] => {
+    "changed": false, 
+    "checksum": "ffc2b1ef1ec87de48e049e62b1726c2dea247302", 
+    "dest": "C:\\temp\\ansible\\remote_run.py", 
+    "operation": "file_copy", 
+    "original_basename": "remote_run.py", 
+    "size": 90, 
+    "src": "remote_run.py"
+}
+2021-05-22 17:28:37,960 p=4233 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:28:38,043 p=4244 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_shell.ps1
+2021-05-22 17:28:38,043 p=4244 u=root n=ansible | Pipelining is enabled.
+2021-05-22 17:28:38,045 p=4244 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 17:28:38,134 p=4244 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 17:28:41,357 p=4233 u=root n=ansible | fatal: [win10]: FAILED! => {
+    "changed": true, 
+    "cmd": "python 'C:\\temp\\ansible\\remote_run.py'", 
+    "delta": "0:00:01.436865", 
+    "end": "2021-05-22 05:28:40.739841", 
+    "msg": "non-zero return code", 
+    "rc": 1, 
+    "start": "2021-05-22 05:28:39.302975", 
+    "stderr": "Program 'python.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ject Text.UTF8Encoding $false; python 'C:\\temp\\ansible\\remote_run.py'\r\n+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ject Text.UTF8Encoding $false; python 'C:\\temp\\ansible\\remote_run.py'\r\n+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", 
+    "stderr_lines": [
+        "Program 'python.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", 
+        "+ ... ject Text.UTF8Encoding $false; python 'C:\\temp\\ansible\\remote_run.py'", 
+        "+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", 
+        "At line:1 char:65", 
+        "+ ... ject Text.UTF8Encoding $false; python 'C:\\temp\\ansible\\remote_run.py'", 
+        "+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", 
+        "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", 
+        "    + FullyQualifiedErrorId : NativeCommandFailed"
+    ], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+2021-05-22 17:28:41,360 p=4233 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:28:41,360 p=4233 u=root n=ansible | win10                      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:30:35,363 p=4257 u=root n=ansible | ansible-playbook 2.9.21
+  config file = /ansible/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.16 (default, Oct 10 2019, 22:02:15) [GCC 8.3.0]
+2021-05-22 17:30:35,364 p=4257 u=root n=ansible | Using /ansible/ansible.cfg as config file
+2021-05-22 17:30:35,377 p=4257 u=root n=ansible | host_list declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 17:30:35,378 p=4257 u=root n=ansible | script declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 17:30:35,379 p=4257 u=root n=ansible | auto declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 17:30:35,387 p=4257 u=root n=ansible | Parsed /ansible/inventory inventory source with ini plugin
+2021-05-22 17:30:35,783 p=4257 u=root n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-05-22 17:30:35,784 p=4257 u=root n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-05-22 17:30:35,785 p=4257 u=root n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-05-22 17:30:35,785 p=4257 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 17:30:35,786 p=4257 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 17:30:35,787 p=4257 u=root n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-05-22 17:30:35,788 p=4257 u=root n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-05-22 17:30:35,789 p=4257 u=root n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-05-22 17:30:35,790 p=4257 u=root n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-05-22 17:30:35,791 p=4257 u=root n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-05-22 17:30:35,792 p=4257 u=root n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-05-22 17:30:35,793 p=4257 u=root n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-05-22 17:30:35,795 p=4257 u=root n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-05-22 17:30:35,796 p=4257 u=root n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-05-22 17:30:35,796 p=4257 u=root n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-05-22 17:30:35,797 p=4257 u=root n=ansible | PLAYBOOK: playbook.yml ******************************************************************************************************************************************
+2021-05-22 17:30:35,797 p=4257 u=root n=ansible | 1 plays in playbook.yml
+2021-05-22 17:30:35,801 p=4257 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:30:35,810 p=4257 u=root n=ansible | META: ran handlers
+2021-05-22 17:30:35,815 p=4257 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:30:35,877 p=4264 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_file.ps1
+2021-05-22 17:30:35,879 p=4264 u=root n=ansible | Pipelining is enabled.
+2021-05-22 17:30:35,880 p=4264 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 17:30:35,970 p=4264 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 17:30:37,247 p=4257 u=root n=ansible | ok: [win10] => {
+    "changed": false
+}
+2021-05-22 17:30:37,252 p=4257 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:30:37,320 p=4266 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_copy.ps1
+2021-05-22 17:30:37,320 p=4266 u=root n=ansible | Pipelining is enabled.
+2021-05-22 17:30:37,322 p=4266 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 17:30:37,396 p=4266 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 17:30:38,696 p=4257 u=root n=ansible | ok: [win10] => {
+    "changed": false, 
+    "checksum": "ffc2b1ef1ec87de48e049e62b1726c2dea247302", 
+    "dest": "C:\\temp\\ansible\\remote_run.py", 
+    "operation": "file_copy", 
+    "original_basename": "remote_run.py", 
+    "size": 90, 
+    "src": "remote_run.py"
+}
+2021-05-22 17:30:38,707 p=4257 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:30:38,772 p=4268 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_shell.ps1
+2021-05-22 17:30:38,773 p=4268 u=root n=ansible | Pipelining is enabled.
+2021-05-22 17:30:38,775 p=4268 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 17:30:38,870 p=4268 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 17:30:41,928 p=4257 u=root n=ansible | fatal: [win10]: FAILED! => {
+    "changed": true, 
+    "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", 
+    "delta": "0:00:01.141351", 
+    "end": "2021-05-22 05:30:41.332112", 
+    "msg": "non-zero return code", 
+    "rc": 1, 
+    "start": "2021-05-22 05:30:40.190760", 
+    "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", 
+    "stderr_lines": [
+        "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", 
+        "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", 
+        "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", 
+        "At line:1 char:65", 
+        "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", 
+        "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", 
+        "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", 
+        "    + FullyQualifiedErrorId : NativeCommandFailed"
+    ], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+2021-05-22 17:30:41,930 p=4257 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:30:41,931 p=4257 u=root n=ansible | win10                      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:32:40,072 p=4279 u=root n=ansible | ansible-playbook 2.9.21
+  config file = /ansible/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.16 (default, Oct 10 2019, 22:02:15) [GCC 8.3.0]
+2021-05-22 17:32:40,074 p=4279 u=root n=ansible | Using /ansible/ansible.cfg as config file
+2021-05-22 17:32:40,104 p=4279 u=root n=ansible | host_list declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 17:32:40,109 p=4279 u=root n=ansible | script declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 17:32:40,109 p=4279 u=root n=ansible | auto declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 17:32:40,122 p=4279 u=root n=ansible | Parsed /ansible/inventory inventory source with ini plugin
+2021-05-22 17:32:40,795 p=4279 u=root n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-05-22 17:32:40,796 p=4279 u=root n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-05-22 17:32:40,797 p=4279 u=root n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-05-22 17:32:40,797 p=4279 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 17:32:40,799 p=4279 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 17:32:40,800 p=4279 u=root n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-05-22 17:32:40,801 p=4279 u=root n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-05-22 17:32:40,802 p=4279 u=root n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-05-22 17:32:40,804 p=4279 u=root n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-05-22 17:32:40,805 p=4279 u=root n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-05-22 17:32:40,806 p=4279 u=root n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-05-22 17:32:40,807 p=4279 u=root n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-05-22 17:32:40,807 p=4279 u=root n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-05-22 17:32:40,807 p=4279 u=root n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-05-22 17:32:40,808 p=4279 u=root n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-05-22 17:32:40,808 p=4279 u=root n=ansible | PLAYBOOK: playbook.yml ******************************************************************************************************************************************
+2021-05-22 17:32:40,809 p=4279 u=root n=ansible | 1 plays in playbook.yml
+2021-05-22 17:32:40,815 p=4279 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:32:40,830 p=4279 u=root n=ansible | META: ran handlers
+2021-05-22 17:32:40,837 p=4279 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:32:41,003 p=4286 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_file.ps1
+2021-05-22 17:32:41,005 p=4286 u=root n=ansible | Pipelining is enabled.
+2021-05-22 17:32:41,012 p=4286 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 17:32:41,200 p=4286 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 17:32:43,147 p=4279 u=root n=ansible | ok: [win10] => {
+    "changed": false
+}
+2021-05-22 17:32:43,151 p=4279 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:32:43,230 p=4288 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_copy.ps1
+2021-05-22 17:32:43,231 p=4288 u=root n=ansible | Pipelining is enabled.
+2021-05-22 17:32:43,233 p=4288 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 17:32:43,339 p=4288 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 17:32:44,783 p=4279 u=root n=ansible | ok: [win10] => {
+    "changed": false, 
+    "checksum": "ffc2b1ef1ec87de48e049e62b1726c2dea247302", 
+    "dest": "C:\\temp\\ansible\\remote_run.py", 
+    "operation": "file_copy", 
+    "original_basename": "remote_run.py", 
+    "size": 90, 
+    "src": "remote_run.py"
+}
+2021-05-22 17:32:44,787 p=4279 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:32:44,855 p=4290 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_shell.ps1
+2021-05-22 17:32:44,856 p=4290 u=root n=ansible | Pipelining is enabled.
+2021-05-22 17:32:44,859 p=4290 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 17:32:44,945 p=4290 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 17:32:48,496 p=4279 u=root n=ansible | fatal: [win10]: FAILED! => {
+    "changed": true, 
+    "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", 
+    "delta": "0:00:01.578011", 
+    "end": "2021-05-22 05:32:47.908904", 
+    "msg": "non-zero return code", 
+    "rc": 1, 
+    "start": "2021-05-22 05:32:46.330892", 
+    "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", 
+    "stderr_lines": [
+        "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", 
+        "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", 
+        "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", 
+        "At line:1 char:65", 
+        "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", 
+        "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", 
+        "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", 
+        "    + FullyQualifiedErrorId : NativeCommandFailed"
+    ], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+2021-05-22 17:32:48,499 p=4279 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:32:48,501 p=4279 u=root n=ansible | win10                      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:34:53,496 p=4301 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:34:53,506 p=4301 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:34:54,995 p=4301 u=root n=ansible | ok: [win10]
+2021-05-22 17:34:54,999 p=4301 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:34:56,279 p=4301 u=root n=ansible | ok: [win10]
+2021-05-22 17:34:56,283 p=4301 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:34:59,349 p=4301 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:01.467264", "end": "2021-05-22 05:34:58.783414", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:34:57.316149", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:34:59,351 p=4301 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:34:59,352 p=4301 u=root n=ansible | win10                      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:37:12,932 p=4324 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:37:12,949 p=4324 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:37:15,900 p=4324 u=root n=ansible | ok: [win10]
+2021-05-22 17:37:15,906 p=4324 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:37:18,009 p=4324 u=root n=ansible | ok: [win10]
+2021-05-22 17:37:18,020 p=4324 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:37:21,562 p=4324 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:01.296986", "end": "2021-05-22 05:37:21.003077", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:37:19.706091", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:37:21,570 p=4324 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:37:21,572 p=4324 u=root n=ansible | win10                      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:38:49,348 p=4349 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:38:49,364 p=4349 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:38:50,668 p=4349 u=root n=ansible | ok: [win10]
+2021-05-22 17:38:50,679 p=4349 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:38:54,416 p=4349 u=root n=ansible | changed: [win10]
+2021-05-22 17:38:54,424 p=4349 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:38:56,793 p=4349 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:00.812517", "end": "2021-05-22 05:38:56.247852", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:38:55.435335", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:38:56,800 p=4349 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:38:56,801 p=4349 u=root n=ansible | win10                      : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:42:45,003 p=4409 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:42:45,018 p=4409 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:42:46,801 p=4409 u=root n=ansible | ok: [win10]
+2021-05-22 17:42:46,805 p=4409 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:42:50,887 p=4409 u=root n=ansible | changed: [win10]
+2021-05-22 17:42:50,893 p=4409 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:42:53,145 p=4409 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:00.578989", "end": "2021-05-22 05:42:52.643418", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:42:52.064429", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:42:53,148 p=4409 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:42:53,149 p=4409 u=root n=ansible | win10                      : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:43:36,911 p=4428 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:43:36,922 p=4428 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:43:38,300 p=4428 u=root n=ansible | ok: [win10]
+2021-05-22 17:43:38,304 p=4428 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:43:42,651 p=4428 u=root n=ansible | changed: [win10]
+2021-05-22 17:43:42,655 p=4428 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:43:44,874 p=4428 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:00.656320", "end": "2021-05-22 05:43:44.350101", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:43:43.693780", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:43:44,878 p=4428 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:43:44,879 p=4428 u=root n=ansible | win10                      : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:44:51,465 p=4450 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:44:51,475 p=4450 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:44:52,804 p=4450 u=root n=ansible | ok: [win10]
+2021-05-22 17:44:52,813 p=4450 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:44:56,569 p=4450 u=root n=ansible | changed: [win10]
+2021-05-22 17:44:56,577 p=4450 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:45:01,456 p=4450 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:03.250761", "end": "2021-05-22 05:45:00.919016", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:44:57.668255", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:45:01,468 p=4450 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:45:01,469 p=4450 u=root n=ansible | win10                      : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:47:03,721 p=4472 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:47:03,734 p=4472 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:47:05,287 p=4472 u=root n=ansible | ok: [win10]
+2021-05-22 17:47:05,292 p=4472 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:47:06,693 p=4472 u=root n=ansible | ok: [win10]
+2021-05-22 17:47:06,701 p=4472 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:47:09,291 p=4472 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:01.046108", "end": "2021-05-22 05:47:08.805038", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:47:07.758930", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:47:09,295 p=4472 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:47:09,296 p=4472 u=root n=ansible | win10                      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:49:25,487 p=4502 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:49:25,499 p=4502 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:49:27,218 p=4502 u=root n=ansible | ok: [win10]
+2021-05-22 17:49:27,224 p=4502 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:49:28,865 p=4502 u=root n=ansible | ok: [win10]
+2021-05-22 17:49:28,878 p=4502 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:49:31,164 p=4502 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:00.655249", "end": "2021-05-22 05:49:30.690731", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:49:30.035481", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:49:31,178 p=4502 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:49:31,178 p=4502 u=root n=ansible | win10                      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:50:46,818 p=4524 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:50:46,832 p=4524 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:50:48,709 p=4524 u=root n=ansible | ok: [win10]
+2021-05-22 17:50:48,719 p=4524 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:50:50,696 p=4524 u=root n=ansible | ok: [win10]
+2021-05-22 17:50:50,706 p=4524 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:50:54,325 p=4524 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:01.937613", "end": "2021-05-22 05:50:53.839477", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:50:51.901863", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:65\r\n+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:65", "+ ... ect Text.UTF8Encoding $false; python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:50:54,331 p=4524 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:50:54,331 p=4524 u=root n=ansible | win10                      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:51:55,946 p=4542 u=root n=ansible | ERROR! the playbook: PYTHONIOENCODING=utf-8 could not be found
+2021-05-22 17:53:32,195 p=4555 u=root n=ansible | ERROR! the playbook: PYTHONIOENCODING=utf-8 could not be found
+2021-05-22 17:53:35,192 p=4558 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:53:35,203 p=4558 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:53:36,769 p=4558 u=root n=ansible | ok: [win10]
+2021-05-22 17:53:36,775 p=4558 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:53:38,128 p=4558 u=root n=ansible | ok: [win10]
+2021-05-22 17:53:38,131 p=4558 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:53:40,257 p=4558 u=root n=ansible | fatal: [win10]: FAILED! => {"changed": true, "cmd": "Set-Item -Path env:PYTHONIOENCODING -Value \"utf-8\";python3 'C:\\temp\\ansible\\remote_run.py'", "delta": "0:00:00.594297", "end": "2021-05-22 05:53:39.791360", "msg": "non-zero return code", "rc": 1, "start": "2021-05-22 05:53:39.197063", "stderr": "Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:116\r\n+ ... THONIOENCODING -Value \"utf-8\";python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\nAt line:1 char:116\r\n+ ... THONIOENCODING -Value \"utf-8\";python3 'C:\\temp\\ansible\\remote_run.py'\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException\r\n    + FullyQualifiedErrorId : NativeCommandFailed", "stderr_lines": ["Program 'python3.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:116", "+ ... THONIOENCODING -Value \"utf-8\";python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.", "At line:1 char:116", "+ ... THONIOENCODING -Value \"utf-8\";python3 'C:\\temp\\ansible\\remote_run.py'", "+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException", "    + FullyQualifiedErrorId : NativeCommandFailed"], "stdout": "", "stdout_lines": []}
+2021-05-22 17:53:40,262 p=4558 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:53:40,264 p=4558 u=root n=ansible | win10                      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:54:02,790 p=4573 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 17:54:02,805 p=4573 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 17:54:04,013 p=4573 u=root n=ansible | ok: [win10]
+2021-05-22 17:54:04,017 p=4573 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 17:54:05,281 p=4573 u=root n=ansible | ok: [win10]
+2021-05-22 17:54:05,290 p=4573 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 17:54:07,144 p=4573 u=root n=ansible | changed: [win10]
+2021-05-22 17:54:07,149 p=4573 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 17:54:07,150 p=4573 u=root n=ansible | win10                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-22 17:56:47,950 p=4621 u=root n=ansible | win10 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2021-05-22 17:57:09,005 p=4633 u=root n=ansible | win10 | CHANGED | rc=0 >>
+DESKTOP-K9U1CIQ
+
+
+2021-05-22 17:57:51,552 p=4646 u=root n=ansible | win10 | FAILED | rc=1 >>
+Program 'python.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:116
++ ... THONIOENCODING -Value "utf-8";python C:\\temp\\ansible\\remote_run.py
++                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+At line:1 char:116
++ ... THONIOENCODING -Value "utf-8";python C:\\temp\\ansible\\remote_run.py
++                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailednon-zero return code
+
+2021-05-22 17:58:27,255 p=4655 u=root n=ansible | win10 | FAILED | rc=1 >>
+Program 'python.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65
++ ... ect Text.UTF8Encoding $false; python C:\\temp\\ansible\\remote_run.py
++                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+At line:1 char:65
++ ... ect Text.UTF8Encoding $false; python C:\\temp\\ansible\\remote_run.py
++                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailednon-zero return code
+
+2021-05-22 17:58:55,869 p=4668 u=root n=ansible | win10 | CHANGED | rc=0 >>
+
+
+2021-05-22 18:00:37,252 p=4685 u=root n=ansible | win10 | FAILED | rc=1 >>
+Program 'python.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65
++ ... ct Text.UTF8Encoding $false; python C:\\temp\\ansible\\remote_test.py
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+At line:1 char:65
++ ... ct Text.UTF8Encoding $false; python C:\\temp\\ansible\\remote_test.py
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailednon-zero return code
+
+2021-05-22 18:00:48,653 p=4694 u=root n=ansible | ansible 2.9.21
+  config file = /ansible/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.16 (default, Oct 10 2019, 22:02:15) [GCC 8.3.0]
+2021-05-22 18:00:48,653 p=4694 u=root n=ansible | Using /ansible/ansible.cfg as config file
+2021-05-22 18:00:48,662 p=4694 u=root n=ansible | host_list declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 18:00:48,662 p=4694 u=root n=ansible | script declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 18:00:48,663 p=4694 u=root n=ansible | auto declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 18:00:48,667 p=4694 u=root n=ansible | Parsed /ansible/inventory inventory source with ini plugin
+2021-05-22 18:00:48,789 p=4694 u=root n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-05-22 18:00:48,790 p=4694 u=root n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-05-22 18:00:48,791 p=4694 u=root n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-05-22 18:00:48,792 p=4694 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 18:00:48,792 p=4694 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 18:00:48,793 p=4694 u=root n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-05-22 18:00:48,793 p=4694 u=root n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-05-22 18:00:48,794 p=4694 u=root n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-05-22 18:00:48,794 p=4694 u=root n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-05-22 18:00:48,795 p=4694 u=root n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-05-22 18:00:48,795 p=4694 u=root n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-05-22 18:00:48,795 p=4694 u=root n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-05-22 18:00:48,796 p=4694 u=root n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-05-22 18:00:48,796 p=4694 u=root n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-05-22 18:00:48,797 p=4694 u=root n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-05-22 18:00:48,833 p=4694 u=root n=ansible | META: ran handlers
+2021-05-22 18:00:49,031 p=4700 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_shell.ps1
+2021-05-22 18:00:49,031 p=4700 u=root n=ansible | Pipelining is enabled.
+2021-05-22 18:00:49,032 p=4700 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 18:00:49,101 p=4700 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 18:00:51,077 p=4694 u=root n=ansible | win10 | FAILED | rc=1 >>
+Program 'python.exe' failed to run: The file cannot be accessed by the systemAt line:1 char:65
++ ... ct Text.UTF8Encoding $false; python C:\\temp\\ansible\\remote_test.py
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+At line:1 char:65
++ ... ct Text.UTF8Encoding $false; python C:\\temp\\ansible\\remote_test.py
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailednon-zero return code
+
+2021-05-22 18:17:41,079 p=4772 u=root n=ansible | ansible 2.9.21
+  config file = /ansible/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.16 (default, Oct 10 2019, 22:02:15) [GCC 8.3.0]
+2021-05-22 18:17:41,082 p=4772 u=root n=ansible | Using /ansible/ansible.cfg as config file
+2021-05-22 18:17:41,096 p=4772 u=root n=ansible | host_list declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 18:17:41,097 p=4772 u=root n=ansible | script declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 18:17:41,097 p=4772 u=root n=ansible | auto declined parsing /ansible/inventory as it did not pass its verify_file() method
+2021-05-22 18:17:41,103 p=4772 u=root n=ansible | Parsed /ansible/inventory inventory source with ini plugin
+2021-05-22 18:17:41,303 p=4772 u=root n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-05-22 18:17:41,304 p=4772 u=root n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-05-22 18:17:41,304 p=4772 u=root n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-05-22 18:17:41,304 p=4772 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 18:17:41,305 p=4772 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-05-22 18:17:41,305 p=4772 u=root n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-05-22 18:17:41,305 p=4772 u=root n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-05-22 18:17:41,305 p=4772 u=root n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-05-22 18:17:41,305 p=4772 u=root n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-05-22 18:17:41,306 p=4772 u=root n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-05-22 18:17:41,306 p=4772 u=root n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-05-22 18:17:41,306 p=4772 u=root n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-05-22 18:17:41,307 p=4772 u=root n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-05-22 18:17:41,307 p=4772 u=root n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-05-22 18:17:41,307 p=4772 u=root n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-05-22 18:17:41,367 p=4772 u=root n=ansible | META: ran handlers
+2021-05-22 18:17:41,736 p=4778 u=root n=ansible | Using module file /usr/lib/python2.7/dist-packages/ansible/modules/windows/win_shell.ps1
+2021-05-22 18:17:41,736 p=4778 u=root n=ansible | Pipelining is enabled.
+2021-05-22 18:17:41,738 p=4778 u=root n=ansible | <192.168.10.4> ESTABLISH WINRM CONNECTION FOR USER: bot147353 on PORT 5985 TO 192.168.10.4
+2021-05-22 18:17:41,848 p=4778 u=root n=ansible | EXEC (via pipeline wrapper)
+2021-05-22 18:17:44,232 p=4772 u=root n=ansible | win10 | CHANGED | rc=0 >>
+Hello, world.
+
+
+2021-05-22 18:17:44,233 p=4772 u=root n=ansible | META: ran handlers
+2021-05-22 18:17:44,234 p=4772 u=root n=ansible | META: ran handlers
+2021-05-22 18:18:49,587 p=4787 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/ansible/playbook.yml': line 16, column 18, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - name: Execute python program
+        win_shell: python '{{ py_dst_dir }}\{{ py_src_name }}'
+                 ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2021-05-22 18:19:33,419 p=4799 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 18:19:33,436 p=4799 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 18:19:34,677 p=4799 u=root n=ansible | ok: [win10]
+2021-05-22 18:19:34,681 p=4799 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 18:19:36,017 p=4799 u=root n=ansible | ok: [win10]
+2021-05-22 18:19:36,025 p=4799 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 18:19:37,841 p=4799 u=root n=ansible | changed: [win10]
+2021-05-22 18:19:37,859 p=4799 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 18:19:37,859 p=4799 u=root n=ansible | win10                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-22 18:20:11,723 p=4814 u=root n=ansible | PLAY [windows] **************************************************************************************************************************************************
+2021-05-22 18:20:11,734 p=4814 u=root n=ansible | TASK [Create folder on remote host] *****************************************************************************************************************************
+2021-05-22 18:20:12,952 p=4814 u=root n=ansible | ok: [win10]
+2021-05-22 18:20:12,956 p=4814 u=root n=ansible | TASK [Copy python file to remote host] **************************************************************************************************************************
+2021-05-22 18:20:16,605 p=4814 u=root n=ansible | changed: [win10]
+2021-05-22 18:20:16,608 p=4814 u=root n=ansible | TASK [Execute python program] ***********************************************************************************************************************************
+2021-05-22 18:20:23,444 p=4814 u=root n=ansible | changed: [win10]
+2021-05-22 18:20:23,448 p=4814 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************************************
+2021-05-22 18:20:23,449 p=4814 u=root n=ansible | win10                      : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
